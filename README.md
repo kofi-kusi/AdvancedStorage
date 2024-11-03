@@ -58,6 +58,15 @@ Before you begin, ensure you have:
 
 ### Modifications
 Implemented `arrays`, `structs`, and `enum` data structres.
+### Mapping
+- Learnt how to use `mapping` keyword to estabhlish a relattionship between a key and value pair.
+### Events and Logging
+- Implemented an `event` which is a way for a smart contract to communicate that something important occured.
+- SYNTAX: `event EventName(parameters) visibility { // code block }`.
+### Storage locations
+- `storage`: location for state variables to be stored permanently.
+- `calldata`: immutable temporary storage location.
+- `memory`: mutable temporary location.
 
 ## Conclusion
 
