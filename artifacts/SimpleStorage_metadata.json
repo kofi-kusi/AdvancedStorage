@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.25+commit.b61c2a91"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -13,12 +13,6 @@
 						"internalType": "uint256",
 						"name": "newNumber",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "updatedBy",
-						"type": "address"
 					}
 				],
 				"name": "NumberUpdated",
@@ -289,17 +283,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_newNumber",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_newName",
+						"type": "string"
 					}
 				],
-				"name": "updateNumber",
+				"name": "updateUsername",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"stateMutability": "pure",
@@ -334,11 +328,11 @@
 	},
 	"sources": {
 		"SimpleStorage.sol": {
-			"keccak256": "0x39399fe7c959f9e31dd72aa438d03090d085aed9086aecd31195bfe4cf90f4f2",
+			"keccak256": "0x70143e82201685fd029cdcdb1bbc2633648651ab4397fd920643106677dd34dc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://85b3176f7eb51083aea587483d55f7c1ff3c646ac6cb25244372c5f0db403103",
-				"dweb:/ipfs/QmNpy4TWfhwsWL6StAcPXd69dkmQcB4vg1pUUfk6xk6A3u"
+				"bzz-raw://693fd9e538add3cc8f2c1c9f4ccbd812d8c7ad736705663f754586cf1d0fe488",
+				"dweb:/ipfs/QmdDWH9ZLEx6mXPjts3S1y8rwSiq6oGw7L5ym1wzwDekiF"
 			]
 		}
 	},

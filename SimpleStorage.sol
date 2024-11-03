@@ -2,9 +2,14 @@
 pragma solidity ^0.8.25;
 
 contract SimpleStorage {
-    uint256 private favoriteNumber;
+    uint256 private favoriteNumber; // State variable stored in storage
     uint256[] public favoriteNumbers; // Dynamic array to store multiple favorite numbers
     uint256 public neverAFavoriteNumber; // State variable stored in storage
+
+
+    mapping(string => uint256) public nameToFavoriteNumber;
+
+    event NumberUpdated(uint256 newNumber);
 
     // Struct to store a person’s name and their favorite number
     struct Person {
@@ -24,7 +29,7 @@ contract SimpleStorage {
 
     function storeNumber(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
-        emit NumberUpdated(_favoriteNumber, msg.sender);
+        emit NumberUpdated(_favoriteNumber);
     }
 
     function getFavoriteNumber() public view returns (uint256) {
@@ -83,15 +88,12 @@ contract SimpleStorage {
         return state == ContractState.Active;
     }
 
-    mapping(string => uint256) public nameToFavoriteNumber;
-
-    event NumberUpdated(uint256 newNumber, address updatedBy);
 
     // Function that uses a memory variable
-    function updateNumber(uint256 _newNumber) public pure returns(uint256){
+    function updateUsername(string memory _newName) public pure returns(string memory) {
         // retrieves the new number from memory and adds 10 to it.
-        uint256 tempNumber = _newNumber + 10;
-        return tempNumber;
+        _newName = "kusi";
+        return _newName;
     }
 
     // Function that uses calldata variable
